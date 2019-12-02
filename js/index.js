@@ -49,6 +49,10 @@ navBar[3].textContent = siteContent["nav"]["nav-item-4"]
 navBar[4].textContent = siteContent["nav"]["nav-item-5"]
 navBar[5].textContent = siteContent["nav"]["nav-item-6"]
 
+navBar.forEach(function(element){
+  element.style.color = "red";
+})
+
 let mainImgLeft = document.getElementById("cta-img");
 mainImgLeft.setAttribute('src', siteContent["cta"]["img-src"])
 
