@@ -49,9 +49,32 @@ navBar[3].textContent = siteContent["nav"]["nav-item-4"]
 navBar[4].textContent = siteContent["nav"]["nav-item-5"]
 navBar[5].textContent = siteContent["nav"]["nav-item-6"]
 
+
+// creating two new elements to add to the navigation bar
+
+
+let navItems = document.querySelector("nav"); // Should this be "nav" or "nav a"?
+//console.log(navItems)
+let new_anchor1 = document.createElement("a");   // Create a new anchor tag
+let textNode1 = document.createTextNode("Hello"); // Create a text node to be appended to the new anchor
+//console.log(textNode1)
+let new_anchor2 = document.createElement("a");
+let textNode2 = document.createTextNode("Good Bye");
+
+new_anchor1.appendChild(textNode1)
+navItems.prepend(new_anchor1)
+//console.log(new_anchor1)
+
+new_anchor2.appendChild(textNode2)
+navItems.prepend(new_anchor2)
+
+//
+navBar = document.querySelectorAll("nav a");
+
 navBar.forEach(function(element){
-  element.style.color = "red";
+  element.style.color = "green";
 })
+
 
 let mainImgLeft = document.getElementById("cta-img");
 mainImgLeft.setAttribute('src', siteContent["cta"]["img-src"])
